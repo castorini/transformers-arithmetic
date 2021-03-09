@@ -1,5 +1,3 @@
-configargparse>=1.2.3
-humanfriendly
-transformers>=3.0.2
-pytorch-lightning>=0.8.4
-num2words
+transformers==4.3.3
+pytorch-lightning==1.1.5
+num2words==0.5.10

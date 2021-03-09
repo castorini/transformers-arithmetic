@@ -2,7 +2,7 @@
 
 This repository contains the code to reproduce the experiments from the paper ["Investigating the Limitations of Transformers with Simple Arithmetic Tasks"](https://arxiv.org/abs/2102.13019)
 
-First install the required packages:
+First, install the required packages:
 ```
 pip install -r requirements.txt
 ```
@@ -10,7 +10,7 @@ pip install -r requirements.txt
 The command below trains and evaluates a T5-base model on the task of adding up to 15-digits:
 
 ```
-python -u main.py \
+python main.py \
     --output_dir=. \
     --model_name_or_path=t5-base \
     --operation=addition \
@@ -41,7 +41,7 @@ python -u main.py \
     --gamma=1.0 \
     --step_size=1000 \
     --max_epochs=20 \
-    --check_val_every_n_epoch=2
+    --check_val_every_n_epoch=2 \
     --amp_level=O0 \
     --precision=32 \
     --gradient_clip_val=1.0

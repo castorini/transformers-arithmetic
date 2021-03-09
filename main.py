@@ -250,6 +250,10 @@ class T5Finetuner(pl.LightningModule):
 
         return [optimizer], [scheduler]
 
+    def configure_optimizers(self):
+        optimizer = self.get_optimizer()
+        return optimizer
+
 
 class MyDataset(Dataset):
     def __init__(self, n_examples: int, min_digits: int, max_digits: int, operation: str,
