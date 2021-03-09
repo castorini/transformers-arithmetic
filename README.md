@@ -1,6 +1,8 @@
 # transformers-arithmetic
 
-This repository contains the code to reproduce the experiments from the paper ["Investigating the Limitations of Transformers with Simple Arithmetic Tasks"](https://arxiv.org/abs/2102.13019)
+This repository contains the code to reproduce the experiments from the paper:
+
+ [Nogueira, Jiang, Lin "Investigating the Limitations of Transformers with Simple Arithmetic Tasks", 2021](https://arxiv.org/abs/2102.13019)
 
 First, install the required packages:
 ```
@@ -47,5 +49,12 @@ python main.py \
     --gradient_clip_val=1.0
 ```
 
-This training should take approximately 10 hours on a V100 GPU.
-The exact match on the test set should be 1.
+This training should take 10 hours on a V100 GPU.
+
+The exact match on the test set should be 1:
+```
+--------------------------------------------------------------------------------
+DATALOADER:0 TEST RESULTS
+{'test_exact_match': 1.000}
+--------------------------------------------------------------------------------
+```
